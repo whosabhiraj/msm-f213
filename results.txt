@@ -1,0 +1,461 @@
+sample: ['2014-01-01', '2025-12-01']
+N: 144
+weights:
+  rural: 0.4725
+  urban: 0.2962
+  combined: 0.3906
+identity_max_abs_error_pp: 0.0000
+descriptive:
+  H_rural:
+    mean: 4.9594
+    median: 5.2813
+    sd: 1.9406
+    min: -0.2506
+    max: 8.6584
+    cv: 0.3913
+    ar1: 0.9058
+    min_month: 2025-10
+    max_month: 2014-01
+  H_urban:
+    mean: 4.8480
+    median: 4.7395
+    sd: 1.5487
+    min: 0.8776
+    max: 8.5577
+    cv: 0.3194
+    ar1: 0.8916
+    min_month: 2025-10
+    max_month: 2014-01
+  H_combined:
+    mean: 4.9069
+    median: 5.0022
+    sd: 1.6993
+    min: 0.2541
+    max: 8.6042
+    cv: 0.3463
+    ar1: 0.8984
+    min_month: 2025-10
+    max_month: 2014-01
+  F_rural:
+    mean: 4.8110
+    median: 5.0492
+    sd: 3.8754
+    min: -4.8511
+    max: 13.0403
+    cv: 0.8055
+    ar1: 0.9089
+    min_month: 2025-10
+    max_month: 2019-12
+  F_urban:
+    mean: 4.9511
+    median: 5.1364
+    sd: 3.9752
+    min: -5.1780
+    max: 16.1243
+    cv: 0.8029
+    ar1: 0.8775
+    min_month: 2025-10
+    max_month: 2019-12
+  F_combined:
+    mean: 4.8576
+    median: 5.0587
+    sd: 3.8256
+    min: -5.0213
+    max: 14.1912
+    cv: 0.7875
+    ar1: 0.8975
+    min_month: 2025-10
+    max_month: 2019-12
+  NF_rural:
+    mean: 5.1373
+    median: 5.1976
+    sd: 1.4089
+    min: 2.2510
+    max: 8.3495
+    cv: 0.2743
+    ar1: 0.9553
+    min_month: 2019-11
+    max_month: 2021-05
+  NF_urban:
+    mean: 4.8291
+    median: 4.3906
+    sd: 1.3894
+    min: 2.0836
+    max: 8.6759
+    cv: 0.2877
+    ar1: 0.9598
+    min_month: 2024-06
+    max_month: 2014-05
+  NF_combined:
+    mean: 4.9731
+    median: 4.8205
+    sd: 1.3239
+    min: 2.2903
+    max: 8.0066
+    cv: 0.2662
+    ar1: 0.9648
+    min_month: 2024-08
+    max_month: 2014-04
+corr:
+  H_rural~H_urban: 0.8587
+  F_rural~F_urban: 0.9008
+  H_rural~F_rural: 0.9202
+  H_urban~F_urban: 0.7782
+  F_rural~NF_rural: -0.0627
+  F_urban~NF_urban: -0.0207
+mean_tests:
+  food_minus_headline_rural:
+    naive_t: -0.8009
+    naive_p: 0.4245
+    sd: 2.2233
+    share_positive: 0.4236
+    mean_abs: 1.8146
+    mean: -0.1484
+    se: 0.4902
+    t: -0.3027
+    p: 0.7621
+  food_minus_headline_urban:
+    naive_t: 0.4216
+    naive_p: 0.6739
+    sd: 2.9357
+    share_positive: 0.5000
+    mean_abs: 2.3568
+    mean: 0.1031
+    se: 0.6440
+    t: 0.1602
+    p: 0.8728
+  rural_minus_urban_headline:
+    naive_t: 1.3346
+    naive_p: 0.1841
+    sd: 1.0014
+    share_positive: 0.5764
+    mean_abs: 0.8000
+    mean: 0.1114
+    se: 0.2361
+    t: 0.4717
+    p: 0.6371
+  rural_minus_urban_food:
+    naive_t: -0.9606
+    naive_p: 0.3384
+    sd: 1.7508
+    share_positive: 0.5764
+    mean_abs: 1.2223
+    mean: -0.1402
+    se: 0.3671
+    t: -0.3818
+    p: 0.7026
+variance_tests:
+  food_vs_headline_rural:
+    var_ratio: 3.9881
+    f_p: 0.0000
+    levene_stat: 62.5721
+    levene_p: 0.0000
+  food_vs_headline_urban:
+    var_ratio: 6.5886
+    f_p: 0.0000
+    levene_stat: 87.8475
+    levene_p: 0.0000
+  food_vs_nonfood_rural:
+    var_ratio: 7.5658
+    f_p: 0.0000
+    levene_stat: 112.1231
+    levene_p: 0.0000
+  food_vs_nonfood_urban:
+    var_ratio: 8.1862
+    f_p: 0.0000
+    levene_stat: 95.4525
+    levene_p: 0.0000
+  headline_rural_vs_urban:
+    var_ratio: 1.5702
+    f_p: 0.0073
+    levene_stat: 7.5895
+    levene_p: 0.0062
+  food_urban_vs_rural:
+    var_ratio: 1.0522
+    f_p: 0.7615
+    levene_stat: 0.0002
+    levene_p: 0.9899
+sd_ratio_block_bootstrap:
+  sd_Hrural_over_Hurban:
+    point: 1.2531
+    ci95_lo: 1.0380
+    ci95_hi: 1.5671
+    share_above_1: 0.9936
+  sd_Frural_over_Furban:
+    point: 0.9749
+    ci95_lo: 0.8568
+    ci95_hi: 1.0732
+    share_above_1: 0.2242
+  sd_Frural_over_Hrural:
+    point: 1.9970
+    ci95_lo: 1.8197
+    ci95_hi: 2.4068
+    share_above_1: 1.0000
+  sd_Furban_over_Hurban:
+    point: 2.5668
+    ci95_lo: 2.2341
+    ci95_hi: 3.5162
+    share_above_1: 1.0000
+passthrough:
+  rural:
+    alpha: 2.7424
+    alpha_se: 0.1875
+    beta: 0.4608
+    beta_se_hac: 0.0385
+    beta_se_ols: 0.0164
+    r2: 0.8468
+    dw: 0.0909
+    mean_eff_weight: 0.4738
+    z_beta_eq_weight: -0.3385
+    p_beta_eq_weight: 0.7350
+    slope_nonfood_on_food: -0.0228
+    implied_beta: 0.4618
+  urban:
+    alpha: 3.3469
+    alpha_se: 0.2425
+    beta: 0.3032
+    beta_se_hac: 0.0430
+    beta_se_ols: 0.0205
+    r2: 0.6056
+    dw: 0.0794
+    mean_eff_weight: 0.3080
+    z_beta_eq_weight: -0.1127
+    p_beta_eq_weight: 0.9102
+    slope_nonfood_on_food: -0.0072
+    implied_beta: 0.3030
+  combined:
+    alpha: 3.0113
+    alpha_se: 0.1931
+    beta: 0.3902
+    beta_se_hac: 0.0405
+    beta_se_ols: 0.0178
+    r2: 0.7718
+    dw: 0.0709
+    mean_eff_weight: 0.3976
+    z_beta_eq_weight: -0.1814
+    p_beta_eq_weight: 0.8561
+    slope_nonfood_on_food: -0.0121
+    implied_beta: 0.3903
+  pooled_interaction:
+    beta_diff_urban_minus_rural: -0.1576
+    se: 0.0544
+    t: -2.8993
+    p: 0.0037
+gap_decomposition:
+  max_abs_residual_pp: 0.0000
+  mean_gap: 0.1114
+  dec_weight:
+    mean: -0.0235
+    mean_abs: 0.5450
+    var_share: 0.2921
+  dec_foodprice:
+    mean: -0.0490
+    mean_abs: 0.4746
+    var_share: 0.4252
+  dec_nonfood:
+    mean: 0.1839
+    mean_abs: 0.4633
+    var_share: 0.2827
+  food_total_var_share: 0.7173
+gap_regression:
+  const: 0.1221
+  const_se: 0.2222
+  gamma: 0.1051
+  gamma_se: 0.0324
+  t_gamma_eq_0: 3.2464
+  p_gamma_eq_0: 0.0012
+  r2: 0.1862
+  weight_diff: 0.1658
+  z_gamma_eq_wdiff: -1.8759
+  p_gamma_eq_wdiff: 0.0607
+  corr_gap_relfood: 0.4315
+gap_regression_2:
+  params:
+    const: 0.1818
+    rel_food: 0.1311
+    gap_F: 0.4067
+  se:
+    const: 0.1391
+    rel_food: 0.0241
+    gap_F: 0.0364
+  p:
+    const: 0.1914
+    rel_food: 0.0000
+    gap_F: 0.0000
+  r2: 0.6803
+convergence:
+  gap_H:
+    adf_aic_stat: -2.2072
+    adf_aic_p: 0.2037
+    adf_aic_lags: 12
+    adf_crit5: -2.8839
+    adf_bic_stat: -2.9403
+    adf_bic_p: 0.0409
+    adf_bic_lags: 1
+    kpss_stat: 0.2456
+    kpss_p_lower_bound: 0.1000
+    kpss_crit5: 0.4630
+    ar1_rho: 0.9137
+    ar1_se: 0.0356
+    half_life_months: 7.6774
+  gap_F:
+    adf_aic_stat: -2.0308
+    adf_aic_p: 0.2732
+    adf_aic_lags: 12
+    adf_crit5: -2.8839
+    adf_bic_stat: -3.6385
+    adf_bic_p: 0.0051
+    adf_bic_lags: 1
+    kpss_stat: 0.1879
+    kpss_p_lower_bound: 0.1000
+    kpss_crit5: 0.4630
+    ar1_rho: 0.8943
+    ar1_se: 0.0374
+    half_life_months: 6.2019
+  wedge_rural:
+    adf_aic_stat: -2.7432
+    adf_aic_p: 0.0669
+    adf_aic_lags: 12
+    adf_crit5: -2.8839
+    adf_bic_stat: -3.0350
+    adf_bic_p: 0.0317
+    adf_bic_lags: 1
+    kpss_stat: 0.1110
+    kpss_p_lower_bound: 0.1000
+    kpss_crit5: 0.4630
+    ar1_rho: 0.9302
+    ar1_se: 0.0327
+    half_life_months: 9.5825
+  wedge_urban:
+    adf_aic_stat: -2.3777
+    adf_aic_p: 0.1481
+    adf_aic_lags: 12
+    adf_crit5: -2.8839
+    adf_bic_stat: -3.3690
+    adf_bic_p: 0.0121
+    adf_bic_lags: 1
+    kpss_stat: 0.1055
+    kpss_p_lower_bound: 0.1000
+    kpss_crit5: 0.4630
+    ar1_rho: 0.9044
+    ar1_se: 0.0374
+    half_life_months: 6.8998
+  level_H_rural:
+    adf_stat: -1.5954
+    adf_p: 0.4859
+    adf_lags: 14
+  level_H_urban:
+    adf_stat: -1.1179
+    adf_p: 0.7079
+    adf_lags: 14
+  level_F_rural:
+    adf_stat: -2.1277
+    adf_p: 0.2335
+    adf_lags: 14
+  level_F_urban:
+    adf_stat: -2.0839
+    adf_p: 0.2510
+    adf_lags: 12
+  engle_granger_urban_on_rural:
+    stat: -1.8915
+    p: 0.5843
+    crit5: -3.3792
+  long_run_slope_urban_on_rural: 0.6853
+  ecm_urban:
+    ect: -0.1194
+    se: 0.0378
+    p: 0.0020
+    r2: 0.7502
+  ecm_rural:
+    ect: 0.1376
+    se: 0.0444
+    p: 0.0023
+crosscorr_food_lead_nonfood:
+  rural:
+    lag0: -0.0627
+    lag3: -0.0628
+    lag6: -0.0270
+    lag12: 0.0943
+    lag18: 0.1971
+    lag24: 0.1654
+  urban:
+    lag0: -0.0207
+    lag3: -0.0130
+    lag6: 0.0279
+    lag12: 0.0231
+    lag18: 0.0010
+    lag24: 0.1119
+  combined:
+    lag0: -0.0350
+    lag3: -0.0342
+    lag6: -0.0133
+    lag12: 0.0115
+    lag18: 0.0590
+    lag24: 0.1339
+subperiods:
+  2014-2019:
+    H_rural:
+      mean: 4.6601
+      sd: 1.9112
+    H_urban:
+      mean: 4.5267
+      sd: 1.4677
+    F_rural:
+      mean: 3.9215
+      sd: 3.5278
+    F_urban:
+      mean: 4.0411
+      sd: 3.7370
+    gap_H:
+      mean: 0.1334
+      sd: 1.1634
+    gap_F:
+      mean: -0.1196
+      sd: 2.2643
+    n: 72
+  2020-2022:
+    H_rural:
+      mean: 6.1235
+      sd: 1.3257
+    H_urban:
+      mean: 6.1965
+      sd: 0.7827
+    F_rural:
+      mean: 6.3866
+      sd: 3.4495
+    F_urban:
+      mean: 6.7744
+      sd: 3.0808
+    gap_H:
+      mean: -0.0730
+      sd: 0.8035
+    gap_F:
+      mean: -0.3878
+      sd: 1.1931
+    n: 36
+  2023-2025:
+    H_rural:
+      mean: 4.3938
+      sd: 2.0764
+    H_urban:
+      mean: 4.1420
+      sd: 1.4903
+    F_rural:
+      mean: 5.0143
+      sd: 4.4713
+    F_urban:
+      mean: 4.9478
+      sd: 4.6496
+    gap_H:
+      mean: 0.2517
+      sd: 0.8062
+    gap_F:
+      mean: 0.0665
+      sd: 0.7693
+    n: 36
+gap_extremes:
+  max: 1.7565
+  max_month: 2016-02
+  min: -2.6454
+  min_month: 2019-05
+  share_abs_gt_1pp: 0.3750
